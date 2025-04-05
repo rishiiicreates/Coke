@@ -44,16 +44,26 @@ export default function Hero() {
           transition={{ type: "spring", damping: 12, stiffness: 100, delay: 0.4 }}
         >
           <h1 
-            className="coca-cola-heading text-5xl md:text-7xl mb-6" 
+            className="text-5xl md:text-7xl mb-6 text-white" 
             style={{ 
-              textShadow: "2px 2px 4px rgba(0,0,0,0.3), 0 0 10px rgba(255,255,255,0.3), 0 0 20px rgba(255,255,255,0.2)", 
+              fontFamily: "'Loki Cola', 'TCCC-UnityHeadline', 'Montserrat', sans-serif",
+              textShadow: "2px 2px 4px rgba(0,0,0,0.4), 0 0 15px rgba(255,255,255,0.6), 0 0 30px rgba(255,255,255,0.4)",
               letterSpacing: "1px",
-              WebkitTextStroke: "1px rgba(0,0,0,0.1)"
+              WebkitTextStroke: "1px rgba(0,0,0,0.15)",
+              fontWeight: "normal"
             }}
           >
             Refresh the World
           </h1>
-          <p className="text-xl md:text-2xl mb-8 font-semibold" style={{ textShadow: "1px 1px 2px rgba(0,0,0,0.3)" }}>Iconic taste since 1886. Zero sugar, maximum flavor.</p>
+          <p 
+            className="text-xl md:text-2xl mb-8 font-semibold text-white" 
+            style={{ 
+              textShadow: "1px 1px 2px rgba(0,0,0,0.4), 0 0 10px rgba(255,255,255,0.4)", 
+              letterSpacing: "0.5px" 
+            }}
+          >
+            Iconic taste since 1886. Zero sugar, maximum flavor.
+          </p>
         </motion.div>
         
         <motion.div 

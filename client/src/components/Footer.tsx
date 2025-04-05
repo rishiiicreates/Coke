@@ -206,35 +206,34 @@ export default function Footer() {
         <div className="mt-12 pt-8 border-t border-white border-opacity-20">
           <div className="flex flex-col justify-center items-center mb-6 pt-4">
             <div 
-              className="bg-white px-8 py-4 rounded-lg shadow-xl mb-4 border-2 border-[#1DA1F2] relative overflow-hidden"
+              className="bg-[#1DA1F2] px-8 py-5 rounded-xl shadow-xl mb-4 border-4 border-white relative overflow-hidden"
               style={{
-                animation: "pulse-border 3s infinite ease-in-out",
+                animation: "pulse-border 2s infinite ease-in-out",
               }}
             >
-
               <div 
-                className="absolute inset-0 opacity-10"
+                className="absolute inset-0 opacity-20"
                 style={{
-                  background: "linear-gradient(90deg, transparent, rgba(29, 161, 242, 0.6), transparent)",
-                  animation: "wave 3s infinite linear",
+                  background: "linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent)",
+                  animation: "wave 2.5s infinite linear",
                   pointerEvents: "none",
                 }}
               ></div>
               <a 
                 href="https://twitter.com/rishiicreates" 
-                className="flex items-center space-x-3 hover:opacity-90 transition-opacity relative z-10"
+                className="flex items-center space-x-4 hover:opacity-95 transition-opacity relative z-10"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <div className="bg-[#1DA1F2] p-3 rounded-full shadow-md">
+                <div className="bg-white p-3 rounded-full shadow-lg">
                   <TwitterIcon />
                 </div>
                 <span 
-                  className="coca-cola-font font-bold text-3xl text-[#E61D2B]"
+                  className="coca-cola-font font-bold text-4xl text-white"
                   style={{ 
-                    textShadow: "2px 2px 3px rgba(0,0,0,0.2), 0 0 10px rgba(230,29,43,0.2)", 
-                    letterSpacing: "0.5px",
-                    WebkitTextStroke: "0.5px rgba(0,0,0,0.1)"
+                    textShadow: "2px 2px 4px rgba(0,0,0,0.4), 0 0 10px rgba(0,0,0,0.2)", 
+                    letterSpacing: "1px",
+                    WebkitTextStroke: "1px rgba(0,0,0,0.15)"
                   }}
                 >
                   Made by @rishiicreates

@@ -51,25 +51,35 @@ export default function NotFound() {
             </Link>
             
             <div className="mt-8 flex justify-end">
-              <div className="relative">
+              <div 
+                className="bg-[#1DA1F2] px-5 py-3 rounded-lg shadow-lg relative overflow-hidden border-2 border-white"
+                style={{
+                  animation: "pulse-border 2s infinite ease-in-out",
+                }}
+              >
                 <div 
-                  className="absolute inset-0 bg-[#1DA1F2] opacity-10 rounded-lg"
-                  style={{ animation: "pulse-border 3s infinite ease-in-out" }}
+                  className="absolute inset-0 opacity-20"
+                  style={{
+                    background: "linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent)",
+                    animation: "wave 2.5s infinite linear",
+                    pointerEvents: "none",
+                  }}
                 ></div>
                 <a 
                   href="https://twitter.com/rishiicreates" 
-                  className="flex items-center space-x-2 bg-white px-4 py-2 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-[#1DA1F2] relative z-10"
+                  className="flex items-center space-x-3 hover:opacity-95 transition-opacity relative z-10"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <div className="bg-[#1DA1F2] p-1.5 rounded-full shadow-sm">
+                  <div className="bg-white p-2 rounded-full shadow-md">
                     <TwitterIcon />
                   </div>
                   <span 
-                    className="coca-cola-font font-bold text-xl text-[#E61D2B]"
+                    className="coca-cola-font font-bold text-2xl text-white"
                     style={{ 
-                      textShadow: "1px 1px 2px rgba(0,0,0,0.2)",
-                      letterSpacing: "0.5px" 
+                      textShadow: "1px 1px 3px rgba(0,0,0,0.3), 0 0 8px rgba(0,0,0,0.2)",
+                      letterSpacing: "0.5px",
+                      WebkitTextStroke: "0.5px rgba(0,0,0,0.1)"
                     }}
                   >
                     @rishiicreates
