@@ -17,72 +17,69 @@ export default function Hero() {
       
       <div className="container mx-auto px-4 relative z-10 text-center">
         <motion.div 
-          className="mb-12 relative"
+          className="mb-12"
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ type: "spring", damping: 12, stiffness: 100, delay: 0.2 }}
         >
-          {/* Main centered can */}
-          <motion.img 
-            src="https://res.cloudinary.com/dhhfbpqbp/image/upload/v1615892898/coca-cola-classic-can_hn2jvs.png" 
-            alt="Coca-Cola Classic Can" 
-            className="mx-auto can-hover relative z-20"
-            animate={{ 
-              y: [0, -10, 0],
-            }}
-            transition={{ 
-              repeat: Infinity, 
-              duration: 6,
-              ease: "easeInOut"
-            }}
-            style={{
-              filter: "drop-shadow(0px 10px 15px rgba(0,0,0,0.3))"
-            }}
-          />
-          
-          {/* Left can */}
-          <motion.img 
-            src="https://res.cloudinary.com/dhhfbpqbp/image/upload/v1615892898/coca-cola-classic-can_hn2jvs.png" 
-            alt="Coca-Cola Classic Can" 
-            className="can-hover absolute left-1/4 transform -translate-x-1/2 -bottom-5 hidden md:block"
-            style={{ 
-              height: "80%", 
-              zIndex: 10,
-              transform: "rotate(-15deg) translateX(-50%)",
-              filter: "drop-shadow(0px 10px 15px rgba(0,0,0,0.3))"
-            }}
-            animate={{ 
-              y: [0, -8, 0],
-            }}
-            transition={{ 
-              repeat: Infinity, 
-              duration: 7,
-              ease: "easeInOut",
-              delay: 0.5
-            }}
-          />
-          
-          {/* Right can */}
-          <motion.img 
-            src="https://res.cloudinary.com/dhhfbpqbp/image/upload/v1615892898/coca-cola-classic-can_hn2jvs.png" 
-            alt="Coca-Cola Classic Can" 
-            className="can-hover absolute right-1/4 transform translate-x-1/2 -bottom-5 hidden md:block"
-            style={{ 
-              height: "80%", 
-              zIndex: 10,
-              transform: "rotate(15deg) translateX(50%)",
-              filter: "drop-shadow(0px 10px 15px rgba(0,0,0,0.3))"
-            }}
-            animate={{ 
-              y: [0, -8, 0],
-            }}
-            transition={{ 
-              repeat: Infinity, 
-              duration: 7,
-              ease: "easeInOut",
-              delay: 1.5
-            }}
-          />
+          <div className="flex justify-center items-end relative w-full max-w-4xl mx-auto h-64 md:h-72">
+            {/* Left can (Diet Coke) */}
+            <motion.img 
+              src="https://www.coca-cola.com/content/dam/onexp/us/en/brands/diet-coke/en-us-diet-coke-044-12oz.png" 
+              alt="Diet Coca-Cola Can" 
+              className="can-hover h-40 md:h-56 absolute left-1/4 -ml-10 md:-ml-20 bottom-0 z-10"
+              animate={{ 
+                y: [0, -5, 0],
+                rotate: [-5, -3, -5]
+              }}
+              transition={{ 
+                repeat: Infinity, 
+                duration: 7,
+                ease: "easeInOut"
+              }}
+              style={{
+                filter: "drop-shadow(0px 10px 15px rgba(0,0,0,0.3))"
+              }}
+            />
+            
+            {/* Main centered can (Classic) */}
+            <motion.img 
+              src="https://res.cloudinary.com/dhhfbpqbp/image/upload/v1615892898/coca-cola-classic-can_hn2jvs.png" 
+              alt="Coca-Cola Classic Can" 
+              className="can-hover h-48 md:h-64 relative z-20"
+              animate={{ 
+                y: [0, -10, 0],
+              }}
+              transition={{ 
+                repeat: Infinity, 
+                duration: 6,
+                ease: "easeInOut"
+              }}
+              style={{
+                filter: "drop-shadow(0px 10px 15px rgba(0,0,0,0.3))"
+              }}
+            />
+            
+            {/* Right can (Zero) */}
+            <motion.img 
+              src="https://www.coca-cola.com/content/dam/onexp/us/en/brands/coca-cola-zero-sugar/en-us-coca-cola-zero-sugar-044-12oz.png" 
+              alt="Coca-Cola Zero Can" 
+              className="can-hover h-40 md:h-56 absolute right-1/4 -mr-10 md:-mr-20 bottom-0 z-10"
+              animate={{ 
+                y: [0, -5, 0],
+                rotate: [5, 3, 5]
+              }}
+              transition={{ 
+                repeat: Infinity, 
+                duration: 7,
+                ease: "easeInOut",
+                delay: 0.5
+              }}
+              style={{
+                filter: "drop-shadow(0px 10px 15px rgba(0,0,0,0.3))"
+              }}
+            />
+          </div>
         </motion.div>
         
         <motion.div 
