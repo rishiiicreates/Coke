@@ -21,7 +21,7 @@ export default function NotFound() {
               <h1 className="text-2xl font-bold text-gray-900">404 Page Not Found</h1>
             </div>
 
-            <p className="mt-4 text-sm text-gray-600 mb-6">
+            <p className="mt-4 text-sm text-gray-800 font-medium mb-6">
               Sorry, the page you're looking for doesn't exist.
             </p>
             
@@ -31,8 +31,8 @@ export default function NotFound() {
               </a>
             </Link>
             
-            <div className="mt-4 text-xs text-gray-400 text-right">
-              made by @rishiicreates
+            <div className="mt-6 text-sm text-gray-700 text-right font-medium">
+              made by <span className="coca-cola-font text-[#E61D2B]">@rishiicreates</span>
             </div>
           </CardContent>
         </Card>

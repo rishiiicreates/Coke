@@ -122,12 +122,12 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.5, delay: 0.2 }}
                 >
-                  <p className="text-gray-700 mb-4">{product.description}</p>
+                  <p className="text-gray-800 font-medium mb-4 leading-relaxed">{product.description}</p>
                 </motion.div>
                 
                 <div className="mb-6">
                   <motion.h4 
-                    className="coca-cola-font font-semibold text-lg mb-4"
+                    className="coca-cola-font font-semibold text-lg mb-4 text-[#E61D2B]"
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5, delay: 0.3 }}

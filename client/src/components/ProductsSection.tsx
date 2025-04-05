@@ -70,8 +70,8 @@ export default function ProductsSection() {
                       alt={`Coca-Cola ${product.name} Can`} 
                       className="h-64 object-contain mb-6 transform transition-transform group-hover:scale-105"
                     />
-                    <h3 className="coca-cola-font font-bold text-xl mb-2">{product.name}</h3>
-                    <p className="text-gray-600 text-center">0 sugar</p>
+                    <h3 className="coca-cola-font font-bold text-xl mb-2 text-[#E61D2B]">{product.name}</h3>
+                    <p className="text-gray-800 text-center font-medium">0 sugar</p>
                     <button 
                       className="mt-4 text-[#E61D2B]" 
                       onClick={(e) => {
@@ -108,8 +108,8 @@ export default function ProductsSection() {
                       alt={`Coca-Cola ${product.name} Bottle`} 
                       className="h-64 object-contain mb-6 transform transition-transform group-hover:scale-105"
                     />
-                    <h3 className="coca-cola-font font-bold text-xl mb-2">{product.name}</h3>
-                    <p className="text-gray-600 text-center">0% sugar</p>
+                    <h3 className="coca-cola-font font-bold text-xl mb-2 text-[#E61D2B]">{product.name}</h3>
+                    <p className="text-gray-800 text-center font-medium">0% sugar</p>
                     <button 
                       className="mt-4 text-[#E61D2B]" 
                       onClick={(e) => {

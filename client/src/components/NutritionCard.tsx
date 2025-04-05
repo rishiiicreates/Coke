@@ -44,14 +44,14 @@ export default function NutritionCard({ icon, label, value, delay = 0 }: Nutriti
       </motion.div>
       <div>
         <motion.p 
-          className="text-sm text-gray-600"
+          className="text-sm text-gray-800 font-medium"
           initial={{ x: 0 }}
           whileHover={{ x: 3 }}
         >
           {label}
         </motion.p>
         <motion.p 
-          className="font-semibold"
+          className="font-bold text-[#222]"
           initial={{ scale: 1 }}
           whileHover={{ scale: 1.05 }}
         >
