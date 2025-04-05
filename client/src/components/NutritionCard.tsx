@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import { motion } from 'framer-motion';
+import { playSound } from '../lib/soundManager';
 
 type NutritionCardProps = {
   icon: ReactNode;
@@ -24,6 +25,8 @@ export default function NutritionCard({ icon, label, value, delay = 0 }: Nutriti
         backgroundColor: "#FFF5F5",
         transition: { duration: 0.2 }
       }}
+      onMouseEnter={() => playSound('hover', 0.2)}
+      onClick={() => playSound('bubble', 0.3)}
     >
       <motion.div 
         className="text-[#E61D2B]"

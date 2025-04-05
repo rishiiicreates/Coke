@@ -6,6 +6,7 @@ import SugarIcon from "./icons/SugarIcon";
 import SodiumIcon from "./icons/SodiumIcon";
 import CaffeineIcon from "./icons/CaffeineIcon";
 import NutritionCard from "./NutritionCard";
+import { playSound } from "../lib/soundManager";
 
 type Product = {
   id: string;
@@ -30,8 +31,12 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
   useEffect(() => {
     if (!product) return;
     
+    // Play modal open sound
+    playSound('whoosh');
+    
     const handleEscKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
+        playSound('pop');
         onClose();
       }
     };
@@ -46,6 +51,12 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
     };
   }, [product, onClose]);
   
+  // Wrapper for close function that plays sound first
+  const handleClose = () => {
+    playSound('pop');
+    onClose();
+  };
+  
   if (!product) return null;
   
   return (
@@ -59,7 +70,7 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
       >
         <div 
           className="absolute inset-0 bg-black bg-opacity-70 backdrop-blur-sm"
-          onClick={onClose}
+          onClick={handleClose}
         ></div>
         
         <motion.div 
@@ -71,8 +82,9 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
         >
           <button 
             className="absolute top-4 right-4 text-gray-600 hover:text-[#E61D2B] transition-colors"
-            onClick={onClose}
+            onClick={handleClose}
             aria-label="Close"
+            onMouseOver={() => playSound('hover')}
           >
             <CrossIcon />
           </button>
@@ -161,6 +173,8 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
                   transition={{ duration: 0.5, delay: 0.8 }}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
+                  onClick={() => playSound('click')}
+                  onMouseOver={() => playSound('hover')}
                 >
                   FIND IN STORE
                 </motion.button>
