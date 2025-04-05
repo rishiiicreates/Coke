@@ -1,6 +1,11 @@
 import { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import CrossIcon from "./icons/CrossIcon";
+import CaloriesIcon from "./icons/CaloriesIcon";
+import SugarIcon from "./icons/SugarIcon";
+import SodiumIcon from "./icons/SodiumIcon";
+import CaffeineIcon from "./icons/CaffeineIcon";
+import NutritionCard from "./NutritionCard";
 
 type Product = {
   id: string;
@@ -67,6 +72,7 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
           <button 
             className="absolute top-4 right-4 text-gray-600 hover:text-[#E61D2B] transition-colors"
             onClick={onClose}
+            aria-label="Close"
           >
             <CrossIcon />
           </button>
@@ -89,36 +95,75 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
               </div>
               
               <div>
-                <h3 className="font-montserrat font-bold text-2xl md:text-3xl mb-4">{product.name}</h3>
-                <div className="mb-6">
+                <motion.h3 
+                  className="coca-cola-font font-bold text-2xl md:text-3xl mb-4 text-[#E61D2B]"
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  {product.name}
+                </motion.h3>
+                
+                <motion.div 
+                  className="mb-6"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                >
                   <p className="text-gray-700 mb-4">{product.description}</p>
-                </div>
+                </motion.div>
                 
                 <div className="mb-6">
-                  <h4 className="font-montserrat font-semibold text-lg mb-2">Nutrition Facts</h4>
-                  <div className="grid grid-cols-2 gap-2">
-                    <div className="bg-[#F9F9F9] p-3 rounded">
-                      <p className="text-sm text-gray-600">Calories</p>
-                      <p className="font-semibold">{product.nutrition.calories}</p>
-                    </div>
-                    <div className="bg-[#F9F9F9] p-3 rounded">
-                      <p className="text-sm text-gray-600">Sugar</p>
-                      <p className="font-semibold">{product.nutrition.sugar}</p>
-                    </div>
-                    <div className="bg-[#F9F9F9] p-3 rounded">
-                      <p className="text-sm text-gray-600">Sodium</p>
-                      <p className="font-semibold">{product.nutrition.sodium}</p>
-                    </div>
-                    <div className="bg-[#F9F9F9] p-3 rounded">
-                      <p className="text-sm text-gray-600">Caffeine</p>
-                      <p className="font-semibold">{product.nutrition.caffeine}</p>
-                    </div>
+                  <motion.h4 
+                    className="coca-cola-font font-semibold text-lg mb-4"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                  >
+                    Nutrition Facts
+                  </motion.h4>
+                  
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <NutritionCard 
+                      icon={<CaloriesIcon width={28} height={28} />}
+                      label="Calories"
+                      value={product.nutrition.calories}
+                      delay={0.4}
+                    />
+                    
+                    <NutritionCard 
+                      icon={<SugarIcon width={28} height={28} />}
+                      label="Sugar"
+                      value={product.nutrition.sugar}
+                      delay={0.5}
+                    />
+                    
+                    <NutritionCard 
+                      icon={<SodiumIcon width={28} height={28} />}
+                      label="Sodium"
+                      value={product.nutrition.sodium}
+                      delay={0.6}
+                    />
+                    
+                    <NutritionCard 
+                      icon={<CaffeineIcon width={28} height={28} />}
+                      label="Caffeine"
+                      value={product.nutrition.caffeine}
+                      delay={0.7}
+                    />
                   </div>
                 </div>
                 
-                <button className="w-full bg-[#E61D2B] text-white font-montserrat font-semibold py-3 px-6 rounded-md hover:bg-[#B5121B] transition-colors">
+                <motion.button 
+                  className="w-full bg-[#E61D2B] text-white coca-cola-font font-semibold py-3 px-6 rounded-md hover:bg-[#B5121B] transition-colors"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.8 }}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
                   FIND IN STORE
-                </button>
+                </motion.button>
               </div>
             </div>
           </div>
