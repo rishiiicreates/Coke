@@ -17,15 +17,16 @@ export default function Hero() {
       
       <div className="container mx-auto px-4 relative z-10 text-center">
         <motion.div 
-          className="mb-12"
+          className="mb-12 relative"
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ type: "spring", damping: 12, stiffness: 100, delay: 0.2 }}
         >
+          {/* Main centered can */}
           <motion.img 
             src="https://res.cloudinary.com/dhhfbpqbp/image/upload/v1615892898/coca-cola-classic-can_hn2jvs.png" 
             alt="Coca-Cola Classic Can" 
-            className="mx-auto can-hover"
+            className="mx-auto can-hover relative z-20"
             animate={{ 
               y: [0, -10, 0],
             }}
@@ -33,6 +34,53 @@ export default function Hero() {
               repeat: Infinity, 
               duration: 6,
               ease: "easeInOut"
+            }}
+            style={{
+              filter: "drop-shadow(0px 10px 15px rgba(0,0,0,0.3))"
+            }}
+          />
+          
+          {/* Left can */}
+          <motion.img 
+            src="https://res.cloudinary.com/dhhfbpqbp/image/upload/v1615892898/coca-cola-classic-can_hn2jvs.png" 
+            alt="Coca-Cola Classic Can" 
+            className="can-hover absolute left-1/4 transform -translate-x-1/2 -bottom-5 hidden md:block"
+            style={{ 
+              height: "80%", 
+              zIndex: 10,
+              transform: "rotate(-15deg) translateX(-50%)",
+              filter: "drop-shadow(0px 10px 15px rgba(0,0,0,0.3))"
+            }}
+            animate={{ 
+              y: [0, -8, 0],
+            }}
+            transition={{ 
+              repeat: Infinity, 
+              duration: 7,
+              ease: "easeInOut",
+              delay: 0.5
+            }}
+          />
+          
+          {/* Right can */}
+          <motion.img 
+            src="https://res.cloudinary.com/dhhfbpqbp/image/upload/v1615892898/coca-cola-classic-can_hn2jvs.png" 
+            alt="Coca-Cola Classic Can" 
+            className="can-hover absolute right-1/4 transform translate-x-1/2 -bottom-5 hidden md:block"
+            style={{ 
+              height: "80%", 
+              zIndex: 10,
+              transform: "rotate(15deg) translateX(50%)",
+              filter: "drop-shadow(0px 10px 15px rgba(0,0,0,0.3))"
+            }}
+            animate={{ 
+              y: [0, -8, 0],
+            }}
+            transition={{ 
+              repeat: Infinity, 
+              duration: 7,
+              ease: "easeInOut",
+              delay: 1.5
             }}
           />
         </motion.div>
