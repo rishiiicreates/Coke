@@ -16,6 +16,12 @@
     font-family: 'TCCC-UnityHeadline', 'Montserrat', sans-serif;
     @apply font-bold;
   }
+
+  .coca-cola-heading {
+    font-family: 'Loki Cola', 'TCCC-UnityHeadline', 'Montserrat', sans-serif;
+    font-weight: normal;
+    @apply text-[#E61D2B];
+  }
 }
 
 :root {
@@ -26,7 +32,8 @@
 }
 
 .coca-cola-font {
-  font-family: 'TCCC-UnityHeadline', 'Montserrat', sans-serif;
+  font-family: 'Loki Cola', 'TCCC-UnityHeadline', 'Montserrat', sans-serif;
+  font-weight: normal;
 }
 
 @layer components {

@@ -43,7 +43,7 @@ export default function Hero() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ type: "spring", damping: 12, stiffness: 100, delay: 0.4 }}
         >
-          <h1 className="coca-cola-font font-bold text-5xl md:text-7xl mb-6">REFRESH THE WORLD</h1>
+          <h1 className="coca-cola-heading text-5xl md:text-7xl mb-6">Refresh the World</h1>
           <p className="text-xl md:text-2xl mb-8 opacity-90">Iconic taste since 1886. Zero sugar, maximum flavor.</p>
         </motion.div>
         
