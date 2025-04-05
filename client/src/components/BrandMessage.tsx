@@ -25,17 +25,39 @@ export default function BrandMessage() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h2 className="coca-cola-font font-bold text-4xl mb-6">REFRESH THE WORLD. MAKE A DIFFERENCE.</h2>
+            <h2 
+              className="coca-cola-font font-bold text-4xl mb-6"
+              style={{ 
+                textShadow: "2px 2px 4px rgba(0,0,0,0.2)", 
+                WebkitTextStroke: "0.5px rgba(255,255,255,0.3)" 
+              }}
+            >
+              REFRESH THE WORLD. MAKE A DIFFERENCE.
+            </h2>
             
             <div className="space-y-6">
               <div>
-                <h3 className="coca-cola-font font-semibold text-2xl mb-2">The Product</h3>
-                <p className="text-lg opacity-90">The perfect balance of sweet refreshment. A moment of happiness in every sip.</p>
+                <h3 
+                  className="coca-cola-font font-semibold text-2xl mb-2"
+                  style={{ textShadow: "1px 1px 3px rgba(0,0,0,0.2)" }}
+                >
+                  The Product
+                </h3>
+                <p className="text-lg font-medium" style={{ textShadow: "1px 1px 2px rgba(0,0,0,0.15)" }}>
+                  The perfect balance of sweet refreshment. A moment of happiness in every sip.
+                </p>
               </div>
               
               <div>
-                <h3 className="coca-cola-font font-semibold text-2xl mb-2">Mission</h3>
-                <p className="text-lg opacity-90">To refresh the world in mind, body and spirit. To inspire moments of optimism through our brands and actions.</p>
+                <h3 
+                  className="coca-cola-font font-semibold text-2xl mb-2"
+                  style={{ textShadow: "1px 1px 3px rgba(0,0,0,0.2)" }}
+                >
+                  Mission
+                </h3>
+                <p className="text-lg font-medium" style={{ textShadow: "1px 1px 2px rgba(0,0,0,0.15)" }}>
+                  To refresh the world in mind, body and spirit. To inspire moments of optimism through our brands and actions.
+                </p>
               </div>
               
               <div className="pt-6">

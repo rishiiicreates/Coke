@@ -43,8 +43,17 @@ export default function Hero() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ type: "spring", damping: 12, stiffness: 100, delay: 0.4 }}
         >
-          <h1 className="coca-cola-heading text-5xl md:text-7xl mb-6">Refresh the World</h1>
-          <p className="text-xl md:text-2xl mb-8 opacity-90">Iconic taste since 1886. Zero sugar, maximum flavor.</p>
+          <h1 
+            className="coca-cola-heading text-5xl md:text-7xl mb-6" 
+            style={{ 
+              textShadow: "2px 2px 4px rgba(0,0,0,0.3), 0 0 10px rgba(255,255,255,0.3), 0 0 20px rgba(255,255,255,0.2)", 
+              letterSpacing: "1px",
+              WebkitTextStroke: "1px rgba(0,0,0,0.1)"
+            }}
+          >
+            Refresh the World
+          </h1>
+          <p className="text-xl md:text-2xl mb-8 font-semibold" style={{ textShadow: "1px 1px 2px rgba(0,0,0,0.3)" }}>Iconic taste since 1886. Zero sugar, maximum flavor.</p>
         </motion.div>
         
         <motion.div 
@@ -54,10 +63,11 @@ export default function Hero() {
           transition={{ type: "spring", damping: 12, stiffness: 100, delay: 0.6 }}
         >
           <button 
-            className="tap-circle bg-white text-[#E61D2B] rounded-full w-24 h-24 flex flex-col items-center justify-center coca-cola-font font-bold cursor-pointer hover:bg-[#CCCCCC] transition-colors mx-auto"
+            className="tap-circle bg-white text-[#E61D2B] rounded-full w-24 h-24 flex flex-col items-center justify-center coca-cola-font font-bold cursor-pointer hover:bg-[#CCCCCC] transition-colors mx-auto shadow-lg"
             onClick={scrollToFlavorSection}
+            style={{ border: "2px solid rgba(255,255,255,0.8)" }}
           >
-            <span className="text-2xl">TAP</span>
+            <span className="text-3xl" style={{ textShadow: "0px 1px 1px rgba(0,0,0,0.1)" }}>TAP</span>
           </button>
         </motion.div>
       </div>
