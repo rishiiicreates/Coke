@@ -13,7 +13,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'TCCC-UnityHeadline', 'Montserrat', sans-serif;
     @apply font-bold;
   }
 }
@@ -23,6 +23,10 @@
   --coca-dark: #B5121B;
   --coca-light: #F9F9F9;
   --coca-silver: #CCCCCC;
+}
+
+.coca-cola-font {
+  font-family: 'TCCC-UnityHeadline', 'Montserrat', sans-serif;
 }
 
 @layer components {

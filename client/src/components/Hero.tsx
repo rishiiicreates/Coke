@@ -43,7 +43,7 @@ export default function Hero() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ type: "spring", damping: 12, stiffness: 100, delay: 0.4 }}
         >
-          <h1 className="font-montserrat font-bold text-5xl md:text-7xl mb-6">REFRESH THE WORLD</h1>
+          <h1 className="coca-cola-font font-bold text-5xl md:text-7xl mb-6">REFRESH THE WORLD</h1>
           <p className="text-xl md:text-2xl mb-8 opacity-90">Iconic taste since 1886. Zero sugar, maximum flavor.</p>
         </motion.div>
         
@@ -54,7 +54,7 @@ export default function Hero() {
           transition={{ type: "spring", damping: 12, stiffness: 100, delay: 0.6 }}
         >
           <button 
-            className="tap-circle bg-white text-[#E61D2B] rounded-full w-24 h-24 flex flex-col items-center justify-center font-montserrat font-bold cursor-pointer hover:bg-[#CCCCCC] transition-colors mx-auto"
+            className="tap-circle bg-white text-[#E61D2B] rounded-full w-24 h-24 flex flex-col items-center justify-center coca-cola-font font-bold cursor-pointer hover:bg-[#CCCCCC] transition-colors mx-auto"
             onClick={scrollToFlavorSection}
           >
             <span className="text-2xl">TAP</span>

@@ -25,23 +25,23 @@ export default function BrandMessage() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h2 className="font-montserrat font-bold text-4xl mb-6">REFRESH THE WORLD. MAKE A DIFFERENCE.</h2>
+            <h2 className="coca-cola-font font-bold text-4xl mb-6">REFRESH THE WORLD. MAKE A DIFFERENCE.</h2>
             
             <div className="space-y-6">
               <div>
-                <h3 className="font-montserrat font-semibold text-2xl mb-2">The Product</h3>
+                <h3 className="coca-cola-font font-semibold text-2xl mb-2">The Product</h3>
                 <p className="text-lg opacity-90">The perfect balance of sweet refreshment. A moment of happiness in every sip.</p>
               </div>
               
               <div>
-                <h3 className="font-montserrat font-semibold text-2xl mb-2">Mission</h3>
+                <h3 className="coca-cola-font font-semibold text-2xl mb-2">Mission</h3>
                 <p className="text-lg opacity-90">To refresh the world in mind, body and spirit. To inspire moments of optimism through our brands and actions.</p>
               </div>
               
               <div className="pt-6">
                 <a 
                   href="#" 
-                  className="inline-block bg-white text-[#E61D2B] font-montserrat font-semibold py-3 px-8 rounded-md hover:bg-[#CCCCCC] transition-colors"
+                  className="inline-block bg-white text-[#E61D2B] coca-cola-font font-semibold py-3 px-8 rounded-md hover:bg-[#CCCCCC] transition-colors"
                 >
                   Order Now
                 </a>

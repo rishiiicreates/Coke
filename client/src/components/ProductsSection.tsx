@@ -19,17 +19,17 @@ export default function ProductsSection() {
   return (
     <section className="py-16 bg-[#F9F9F9] page-section">
       <div className="container mx-auto px-4">
-        <h2 className="font-montserrat font-bold text-4xl text-center mb-4">Products</h2>
+        <h2 className="coca-cola-font font-bold text-4xl text-center mb-4">Products</h2>
         
         <div className="flex justify-center space-x-8 mb-12">
           <button 
-            className={`product-tab font-montserrat font-semibold text-lg border-b-2 px-4 py-2 transition-all ${activeTab === 'cans' ? 'border-[#E61D2B] text-[#E61D2B]' : 'border-transparent text-gray-500'}`}
+            className={`product-tab coca-cola-font font-semibold text-lg border-b-2 px-4 py-2 transition-all ${activeTab === 'cans' ? 'border-[#E61D2B] text-[#E61D2B]' : 'border-transparent text-gray-500'}`}
             onClick={() => setActiveTab('cans')}
           >
             Cans
           </button>
           <button 
-            className={`product-tab font-montserrat font-semibold text-lg border-b-2 px-4 py-2 transition-all ${activeTab === 'bottles' ? 'border-[#E61D2B] text-[#E61D2B]' : 'border-transparent text-gray-500'}`}
+            className={`product-tab coca-cola-font font-semibold text-lg border-b-2 px-4 py-2 transition-all ${activeTab === 'bottles' ? 'border-[#E61D2B] text-[#E61D2B]' : 'border-transparent text-gray-500'}`}
             onClick={() => setActiveTab('bottles')}
           >
             Bottles
@@ -58,7 +58,7 @@ export default function ProductsSection() {
                       alt={`Coca-Cola ${product.name} Can`} 
                       className="h-64 object-contain mb-6 transform transition-transform group-hover:scale-105"
                     />
-                    <h3 className="font-montserrat font-bold text-xl mb-2">{product.name}</h3>
+                    <h3 className="coca-cola-font font-bold text-xl mb-2">{product.name}</h3>
                     <p className="text-gray-600 text-center">0 sugar</p>
                     <button className="mt-4 text-[#E61D2B]">
                       <PlusIcon />
@@ -88,7 +88,7 @@ export default function ProductsSection() {
                       alt={`Coca-Cola ${product.name} Bottle`} 
                       className="h-64 object-contain mb-6 transform transition-transform group-hover:scale-105"
                     />
-                    <h3 className="font-montserrat font-bold text-xl mb-2">{product.name}</h3>
+                    <h3 className="coca-cola-font font-bold text-xl mb-2">{product.name}</h3>
                     <p className="text-gray-600 text-center">0% sugar</p>
                     <button className="mt-4 text-[#E61D2B]">
                       <PlusIcon />

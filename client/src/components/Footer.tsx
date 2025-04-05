@@ -55,7 +55,7 @@ export default function Footer() {
           
           <div className="text-center md:text-right">
             <p className="mb-2">&copy; 2024 The Coca-Cola Company. All rights reserved.</p>
-            <p>Made by <a href="https://twitter.com/rishiicreates" className="font-semibold hover:underline">@rishiicreates</a></p>
+            <p>Made by <a href="https://twitter.com/rishiicreates" className="coca-cola-font font-semibold hover:underline">@rishiicreates</a></p>
           </div>
         </div>
       </div>
