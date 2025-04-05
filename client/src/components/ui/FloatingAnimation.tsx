@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
 import { ReactNode } from "react";
+import { motion } from "framer-motion";
 
 interface FloatingAnimationProps {
   children: ReactNode;
@@ -16,7 +16,7 @@ export default function FloatingAnimation({
   duration = 3,
   className = "",
   yOffset = 15,
-  rotationOffset = 5
+  rotationOffset = 3,
 }: FloatingAnimationProps) {
   return (
     <motion.div
@@ -24,14 +24,16 @@ export default function FloatingAnimation({
       initial={{ y: 0, rotate: 0 }}
       animate={{ 
         y: [-yOffset/2, yOffset/2, -yOffset/2],
-        rotate: [-rotationOffset/2, rotationOffset/2, -rotationOffset/2]
+        rotate: [-rotationOffset/2, rotationOffset/2, -rotationOffset/2],
       }}
       transition={{
         duration: duration,
-        delay: delay,
+        ease: "easeInOut",
+        times: [0, 0.5, 1],
         repeat: Infinity,
         repeatType: "loop",
-        ease: "easeInOut"
+        repeatDelay: 0,
+        delay: delay,
       }}
     >
       {children}

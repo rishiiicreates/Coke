@@ -1,5 +1,4 @@
-import { ReactNode } from "react";
-import { cn } from "@/lib/utils";
+import { ReactNode } from 'react';
 
 interface PaperTextureProps {
   children: ReactNode;
@@ -9,17 +8,11 @@ interface PaperTextureProps {
 
 export default function PaperTexture({ 
   children, 
-  className, 
-  darker = false 
+  className = '',
+  darker = false,
 }: PaperTextureProps) {
   return (
-    <div
-      className={cn(
-        "relative overflow-hidden",
-        darker ? "paper-texture-dark" : "paper-texture",
-        className
-      )}
-    >
+    <div className={`${darker ? 'paper-texture-dark' : 'paper-texture'} ${className}`}>
       {children}
     </div>
   );
