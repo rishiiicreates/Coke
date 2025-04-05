@@ -1,4 +1,5 @@
 import CocaColaLogo from "./icons/CocaColaLogo";
+import TwitterIcon from "./icons/TwitterIcon";
 
 export default function Footer() {
   return (
@@ -48,14 +49,29 @@ export default function Footer() {
           </div>
         </div>
         
-        <div className="mt-12 pt-8 border-t border-white border-opacity-20 flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-4 md:mb-0">
-            <CocaColaLogo className="h-8 fill-white" />
+        <div className="mt-12 pt-8 border-t border-white border-opacity-20">
+          <div className="flex flex-col justify-center items-center mb-6 pt-4">
+            <div className="bg-white px-6 py-3 rounded-lg shadow-lg mb-4">
+              <a 
+                href="https://twitter.com/rishiicreates" 
+                className="flex items-center space-x-3 hover:opacity-90 transition-opacity"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="bg-[#1DA1F2] p-2 rounded-full">
+                  <TwitterIcon />
+                </div>
+                <span className="coca-cola-font font-bold text-2xl text-[#E61D2B]">
+                  Made by @rishiicreates
+                </span>
+              </a>
+            </div>
+            
+            <CocaColaLogo className="h-8 fill-white mt-2" />
           </div>
           
-          <div className="text-center md:text-right">
+          <div className="text-center">
             <p className="mb-2">&copy; 2024 The Coca-Cola Company. All rights reserved.</p>
-            <p className="text-lg">Made by <a href="https://twitter.com/rishiicreates" className="coca-cola-font font-bold text-xl hover:underline relative" style={{ textShadow: "0px 1px 2px rgba(0,0,0,0.2)" }}>@rishiicreates</a></p>
           </div>
         </div>
       </div>

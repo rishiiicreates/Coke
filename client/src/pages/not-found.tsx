@@ -4,6 +4,7 @@ import { Link } from "wouter";
 import PaperTexture from "@/components/ui/PaperTexture";
 import FloatingAnimation from "@/components/ui/FloatingAnimation";
 import BubbleAnimation from "@/components/ui/BubbleAnimation";
+import TwitterIcon from "@/components/icons/TwitterIcon";
 
 export default function NotFound() {
   return (
@@ -31,8 +32,20 @@ export default function NotFound() {
               </a>
             </Link>
             
-            <div className="mt-6 text-sm text-gray-700 text-right font-medium">
-              made by <span className="coca-cola-font text-[#E61D2B]">@rishiicreates</span>
+            <div className="mt-8 flex justify-end">
+              <a 
+                href="https://twitter.com/rishiicreates" 
+                className="flex items-center space-x-2 bg-white px-4 py-2 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="bg-[#1DA1F2] p-1.5 rounded-full">
+                  <TwitterIcon />
+                </div>
+                <span className="coca-cola-font font-bold text-xl text-[#E61D2B]">
+                  @rishiicreates
+                </span>
+              </a>
             </div>
           </CardContent>
         </Card>
