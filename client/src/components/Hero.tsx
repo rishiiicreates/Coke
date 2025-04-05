@@ -25,7 +25,7 @@ export default function Hero() {
           <div className="flex justify-center items-end relative w-full max-w-4xl mx-auto h-64 md:h-72">
             {/* Left can (Diet Coke) */}
             <motion.img 
-              src="/assets/diet-can.png" 
+              src="/zero-can.png" 
               alt="Diet Coca-Cola Can" 
               className="can-hover h-40 md:h-56 absolute left-1/4 -ml-10 md:-ml-20 bottom-0 z-10"
               animate={{ 
@@ -44,7 +44,7 @@ export default function Hero() {
             
             {/* Main centered can (Classic) */}
             <motion.img 
-              src="/assets/classic-can.png" 
+              src="/classic-can.png" 
               alt="Coca-Cola Classic Can" 
               className="can-hover h-48 md:h-64 relative z-20"
               animate={{ 
@@ -62,7 +62,7 @@ export default function Hero() {
             
             {/* Right can (Zero) */}
             <motion.img 
-              src="/assets/zero-can.png" 
+              src="/zero-can.png" 
               alt="Coca-Cola Zero Can" 
               className="can-hover h-40 md:h-56 absolute right-1/4 -mr-10 md:-mr-20 bottom-0 z-10"
               animate={{ 
