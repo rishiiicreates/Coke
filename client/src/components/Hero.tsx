@@ -1,6 +1,11 @@
 import { motion } from "framer-motion";
 import BubbleAnimation from "./ui/BubbleAnimation";
 
+// Import images directly
+import dietCanImage from "@assets/IMG_0265.jpeg";
+import classicCanImage from "@assets/[CITYPNG.COM]HD Cold Coca Cola Classic Can PNG - 2000x2000.png";
+import zeroCanImage from "@assets/[CITYPNG.COM]HD Coca Cola Zero Can PNG - 1500x1500.png";
+
 export default function Hero() {
   const scrollToFlavorSection = () => {
     const flavorSection = document.querySelector(".taste-section");
@@ -25,7 +30,7 @@ export default function Hero() {
           <div className="flex justify-center items-end relative w-full max-w-4xl mx-auto h-64 md:h-72">
             {/* Left can (Diet Coke) */}
             <motion.img 
-              src="/images/coca-cola-diet-can.png" 
+              src={dietCanImage} 
               alt="Diet Coca-Cola Can" 
               className="can-hover h-40 md:h-56 absolute left-1/4 -ml-10 md:-ml-20 bottom-0 z-10"
               animate={{ 
@@ -44,7 +49,7 @@ export default function Hero() {
             
             {/* Main centered can (Classic) */}
             <motion.img 
-              src="/images/coca-cola-classic-can.png" 
+              src={classicCanImage} 
               alt="Coca-Cola Classic Can" 
               className="can-hover h-48 md:h-64 relative z-20"
               animate={{ 
@@ -62,7 +67,7 @@ export default function Hero() {
             
             {/* Right can (Zero) */}
             <motion.img 
-              src="/images/coca-cola-zero-can.png" 
+              src={zeroCanImage} 
               alt="Coca-Cola Zero Can" 
               className="can-hover h-40 md:h-56 absolute right-1/4 -mr-10 md:-mr-20 bottom-0 z-10"
               animate={{ 

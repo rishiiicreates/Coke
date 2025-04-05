@@ -11,7 +11,7 @@ import { playSound } from "../lib/soundManager";
 type Product = {
   id: string;
   name: string;
-  image: string;
+  image: string | any; // Accept both string and imported image types
   description: string;
   nutrition: {
     calories: string;
